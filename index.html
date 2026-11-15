@@ -1700,25 +1700,25 @@
             <p style="color: var(--muted); max-width: 550px; margin: 0 auto;">Fill in your details below. Our expert technician will call you back within 15 minutes to confirm a free measurement visit anywhere in Bangalore.</p>
           </div>
 
-          <form class="lead-form" id="customer-quote-form" onsubmit="handleFormSubmit(event)">
+          <form class="lead-form" id="customer-quote-form" action="https://docs.google.com/forms/d/e/1FAIpQLSdWfdHn81DAQ5QQgyfXCIfbeEhBs8cqGQDs197uit2XG_c5Mg/formResponse" method="POST" target="google-form-response" onsubmit="handleFormSubmit(event)">
             <div class="form-group">
               <label class="form-label" for="client-name">Full Name <span class="req">*</span></label>
-              <input class="form-input" id="client-name" type="text" placeholder="" required>
+              <input class="form-input" id="client-name" name="entry.1892834961" type="text" placeholder="" required>
             </div>
 
             <div class="form-group">
               <label class="form-label" for="client-phone">Mobile / WhatsApp Number <span class="req">*</span></label>
-              <input class="form-input" id="client-phone" type="tel" placeholder="" required>
+              <input class="form-input" id="client-phone" name="entry.1707034700" type="tel" placeholder="" required>
             </div>
 
             <div class="form-group">
               <label class="form-label" for="client-area">Bangalore Location / Area <span class="req">*</span></label>
-              <input class="form-input" id="client-area" type="text" placeholder="" required>
+              <input class="form-input" id="client-area" name="entry.466304126" type="text" placeholder="" required>
             </div>
 
             <div class="form-group">
               <label class="form-label" for="client-property">Property Type <span class="req">*</span></label>
-              <select class="form-select" id="client-property" required>
+              <select class="form-select" id="client-property" name="entry.691660163" required>
                 <option value="" disabled selected>Select property type</option>
                 <option value="Apartment / High-Rise Flat">Apartment / High-Rise Flat</option>
                 <option value="Independent House / Villa">Independent House / Villa</option>
@@ -1749,7 +1749,7 @@
 
             <div class="form-group full-width">
               <label class="form-label" for="client-notes">Approximate Dimensions / Customization Requirements</label>
-              <textarea class="form-textarea" id="client-notes" placeholder=""></textarea>
+              <textarea class="form-textarea" id="client-notes" name="entry.1347020082" placeholder=""></textarea>
             </div>
 
             <div class="form-success-banner" id="form-success">
@@ -1768,6 +1768,7 @@
               </p>
             </div>
           </form>
+          <iframe name="google-form-response" title="Google Forms response" style="display:none"></iframe>
         </div>
       </div>
     </section>
@@ -2308,7 +2309,6 @@
 
     // Form submission handling
     function handleFormSubmit(e) {
-      e.preventDefault();
       const name = document.getElementById('client-name').value.trim();
       const phone = document.getElementById('client-phone').value.trim();
       const area = document.getElementById('client-area').value.trim();
@@ -2318,6 +2318,17 @@
       const selectedTags = [];
       document.querySelectorAll('.use-tag.selected').forEach(t => {
         selectedTags.push(t.getAttribute('data-val'));
+      });
+
+      // Submit each selected net type as a separate Google Forms checkbox answer.
+      document.querySelectorAll('#customer-quote-form input[data-google-form-net]').forEach(input => input.remove());
+      selectedTags.forEach(value => {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = 'entry.1737729409';
+        input.value = value;
+        input.dataset.googleFormNet = 'true';
+        document.getElementById('customer-quote-form').appendChild(input);
       });
 
       // Show success banner
