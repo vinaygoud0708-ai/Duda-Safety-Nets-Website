@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Shield, Phone, MessageCircle, Menu, X, Sparkles } from 'lucide-react';
+import { Shield, Phone, MessageCircle, Menu, X, Sparkles, Calculator } from 'lucide-react';
 import { COMPANY_INFO, createWhatsAppLink } from '../data/companyData';
 
-export default function Navbar({ onOpenForm }) {
+export default function Navbar({ onOpenForm, onOpenCalculator }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 40);
+      setScrolled(window.scrollY > 30);
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -18,6 +18,7 @@ export default function Navbar({ onOpenForm }) {
     { name: '3D Preview', href: '#top' },
     { name: 'Our Nets', href: '#materials' },
     { name: '16 Services', href: '#services' },
+    { name: 'Sq.Ft Calculator', href: '#pricing-calculator' },
     { name: 'Customizer', href: '#customize' },
     { name: 'Work Process', href: '#process' },
     { name: 'Real Gallery', href: '#gallery' },
@@ -29,28 +30,28 @@ export default function Navbar({ onOpenForm }) {
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         scrolled
-          ? 'bg-slate-950/90 backdrop-blur-xl border-b border-white/10 shadow-2xl shadow-black/50 py-3'
-          : 'bg-transparent py-5'
+          ? 'bg-slate-950/90 backdrop-blur-2xl border-b border-white/10 shadow-2xl shadow-black/50 py-3'
+          : 'bg-transparent py-4'
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo */}
         <a href="#top" className="flex items-center gap-2.5 group">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-amber-300 flex items-center justify-center text-slate-950 shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform">
-            <Shield className="w-6 h-6 fill-current" />
+          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-amber-300 flex items-center justify-center text-slate-950 shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform shrink-0">
+            <Shield className="w-5 h-5 sm:w-6 sm:h-6 fill-current" />
           </div>
           <div className="flex flex-col">
-            <div className="text-lg sm:text-xl font-extrabold text-white tracking-tight leading-none group-hover:text-cyan-300 transition-colors">
+            <div className="text-base sm:text-lg font-extrabold text-white tracking-tight leading-none group-hover:text-cyan-300 transition-colors">
               Dúda <span className="text-amber-400">Safety Nets</span>
             </div>
-            <div className="text-[10px] uppercase font-bold tracking-widest text-slate-400 mt-1">
+            <div className="text-[9px] sm:text-[10px] uppercase font-bold tracking-widest text-slate-400 mt-1">
               Bangalore • Garware &amp; SS 316
             </div>
           </div>
         </a>
 
         {/* Desktop Nav Links */}
-        <nav className="hidden lg:flex items-center gap-6 text-xs font-semibold text-slate-300">
+        <nav className="hidden xl:flex items-center gap-5 text-xs font-semibold text-slate-300">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -63,10 +64,10 @@ export default function Navbar({ onOpenForm }) {
         </nav>
 
         {/* Right Action CTAs */}
-        <div className="hidden sm:flex items-center gap-3">
+        <div className="hidden sm:flex items-center gap-2.5">
           <a
             href={`tel:${COMPANY_INFO.phoneClean}`}
-            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 text-xs font-semibold border border-white/10 transition-colors"
+            className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 text-xs font-semibold border border-white/10 transition-colors"
           >
             <Phone className="w-3.5 h-3.5 text-cyan-400" />
             <span>{COMPANY_INFO.phone}</span>
@@ -76,7 +77,7 @@ export default function Navbar({ onOpenForm }) {
             href={createWhatsAppLink("Hello Dúda Safety Nets! I want to request a free site visit.")}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-white text-xs font-bold shadow-md shadow-emerald-600/30 transition-all transform hover:-translate-y-0.5"
+            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-white text-xs font-bold shadow-md shadow-emerald-600/30 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
           >
             <MessageCircle className="w-4 h-4 fill-current" />
             <span>WhatsApp</span>
@@ -87,30 +88,30 @@ export default function Navbar({ onOpenForm }) {
         <button
           type="button"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden p-2 rounded-xl bg-slate-900 border border-white/10 text-slate-300 hover:text-white"
+          className="xl:hidden p-2 rounded-xl bg-slate-900 border border-white/10 text-slate-300 hover:text-white"
           aria-label="Toggle menu"
         >
           {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6 text-cyan-400" />}
         </button>
       </div>
 
-      {/* Mobile Drawer Menu */}
+      {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-slate-950/95 backdrop-blur-2xl border-b border-white/10 px-6 py-6 space-y-4">
-          <nav className="flex flex-col space-y-3">
+        <div className="xl:hidden bg-slate-950/95 backdrop-blur-2xl border-b border-white/10 px-5 py-6 space-y-4 max-h-[85vh] overflow-y-auto">
+          <nav className="flex flex-col space-y-2.5">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-sm font-semibold text-slate-200 hover:text-cyan-400 transition-colors py-1"
+                className="text-xs sm:text-sm font-semibold text-slate-200 hover:text-cyan-400 transition-colors py-1"
               >
                 {link.name}
               </a>
             ))}
           </nav>
 
-          <div className="pt-4 border-t border-white/10 flex flex-col gap-2.5">
+          <div className="pt-3 border-t border-white/10 flex flex-col gap-2">
             <a
               href={`tel:${COMPANY_INFO.phoneClean}`}
               className="w-full py-2.5 rounded-xl bg-slate-900 text-white text-center text-xs font-bold border border-white/10 flex items-center justify-center gap-2"

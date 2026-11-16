@@ -3,7 +3,8 @@ import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import MaterialShowcase from './components/MaterialShowcase';
 import ServiceCatalog from './components/ServiceCatalog';
-import ServiceDetailModal from './components/ServiceDetailModal';
+import ServiceBottomSheet from './components/ServiceBottomSheet';
+import SqFtConfigurator from './components/SqFtConfigurator';
 import CustomizationMatrix from './components/CustomizationMatrix';
 import WorkProcess from './components/WorkProcess';
 import InstallationGallery from './components/InstallationGallery';
@@ -24,19 +25,27 @@ export default function App() {
     }
   };
 
+  const scrollToCalculator = () => {
+    const el = document.getElementById('pricing-calculator');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-cyan-500 selection:text-slate-950 font-sans relative overflow-x-hidden">
       {/* Background Architectural Grid Pattern */}
-      <div className="fixed inset-0 bg-[linear-gradient(to_right,#1e293b0a_1px,transparent_1px),linear-gradient(to_bottom,#1e293b0a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none z-0"></div>
+      <div className="fixed inset-0 bg-[linear-gradient(to_right,#1e293b0a_1px,transparent_1px),linear-gradient(to_bottom,#1e293b0a_1px,transparent_1px)] bg-[size:3.5rem_3.5rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none z-0"></div>
 
-      {/* Main Content Layers */}
+      {/* Main Layers */}
       <div className="relative z-10">
-        <Navbar onOpenForm={scrollToForm} />
+        <Navbar onOpenForm={scrollToForm} onOpenCalculator={scrollToCalculator} />
 
         <main id="top">
-          <HeroSection onOpenForm={scrollToForm} />
+          <HeroSection onOpenForm={scrollToForm} onOpenCalculator={scrollToCalculator} />
           <MaterialShowcase />
           <ServiceCatalog onSelectService={setSelectedService} />
+          <SqFtConfigurator />
           <CustomizationMatrix />
           <WorkProcess />
           <InstallationGallery />
@@ -49,9 +58,9 @@ export default function App() {
         <Footer />
         <FloatingDock onOpenForm={scrollToForm} />
 
-        {/* Modal for Service Specifications */}
+        {/* iOS-Style Swipe-Down Bottom Sheet */}
         {selectedService && (
-          <ServiceDetailModal
+          <ServiceBottomSheet
             service={selectedService}
             onClose={() => setSelectedService(null)}
           />

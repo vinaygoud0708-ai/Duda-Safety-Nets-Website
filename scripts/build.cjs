@@ -19,12 +19,15 @@ if (fs.existsSync(sourceHtml)) {
 console.log('> Running vite build...');
 execSync('npx vite build', { stdio: 'inherit', cwd: rootDir });
 
-// 3. Copy compiled dist/index.html and dist/assets to root
+// 3. Clean and copy compiled dist assets to root
 if (fs.existsSync(distHtml)) {
   fs.copyFileSync(distHtml, rootHtml);
   console.log('✓ Successfully deployed compiled index.html to repository root');
 }
 if (fs.existsSync(distAssets)) {
+  if (fs.existsSync(rootAssets)) {
+    fs.rmSync(rootAssets, { recursive: true, force: true });
+  }
   fs.mkdirSync(rootAssets, { recursive: true });
   fs.cpSync(distAssets, rootAssets, { recursive: true });
   console.log('✓ Successfully deployed assets/ to repository root');
