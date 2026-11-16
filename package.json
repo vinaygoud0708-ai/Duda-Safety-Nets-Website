@@ -4,8 +4,8 @@
   "description": "Ultra-Modern 3D Interactive Website for Dúda Safety Nets Bangalore",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "node scripts/dev.cjs",
+    "build": "node scripts/build.cjs",
     "preview": "vite preview"
   },
   "dependencies": {
