@@ -4,7 +4,7 @@ export const SERVICES = [
     title: "Pigeon Safety Nets",
     category: "balcony",
     badge: "Most Popular",
-    image: "/images/pigeon-safety-nets.jpg",
+    image: "./images/pigeon-safety-nets.jpg",
     shortDesc: "100% pigeon-proofing for balconies, utility areas, and AC outdoor units without blocking fresh air or sunlight.",
     fullDesc: "Specially engineered pigeon safety nets woven with high-density UV-treated polyethylene. Prevents pigeon nesting, droppings, and bird-borne allergies while maintaining an open balcony view. Installed with SS 304 eye-bolts and zero sag guarantee.",
     specs: {
@@ -21,7 +21,7 @@ export const SERVICES = [
     title: "Children Safety Nets",
     category: "residential",
     badge: "Maximum Fall Safety",
-    image: "/images/children-safety-nets.jpg",
+    image: "./images/children-safety-nets.jpg",
     shortDesc: "High-tensile fall-prevention barrier for high-rise balconies, stairwells, and windows with up to 350kg load rating.",
     fullDesc: "Child safety nets engineered with industrial-grade heat-set knot technology to safeguard young children and toddlers from balcony and window falls. Withstands strong impacts, climbing pressure, and harsh Bangalore weather.",
     specs: {
@@ -38,7 +38,7 @@ export const SERVICES = [
     title: "SS 316 Invisible Grills",
     category: "residential",
     badge: "Architectural Luxury",
-    image: "/images/invisible-grills.jpg",
+    image: "./images/invisible-grills.jpg",
     shortDesc: "Sleek marine-grade stainless steel cables inside aluminum tracks offering high security with completely unhindered views.",
     fullDesc: "The pinnacle of contemporary balcony design. Marine-grade 316 stainless steel wire ropes encased in protective clear nylon sheath, anchored into high-gauge extruded aluminium tracks with nylon cross-spacers. Rust-proof, fire-safe, and visually transparent from a distance.",
     specs: {
@@ -55,7 +55,7 @@ export const SERVICES = [
     title: "Cricket Practice Nets",
     category: "sports",
     badge: "Sports Grade",
-    image: "/images/cricket-nets.jpg",
+    image: "./images/cricket-nets.jpg",
     shortDesc: "Heavy-duty impact-absorbing cricket batting & bowling cage nets for rooftops, schools, academies, and clubs.",
     fullDesc: "Engineered specifically to withstand high-velocity leather cricket ball impacts (up to 160 km/h). Weatherproof, knotless or knotted high-tensile HDPE twine constructed with reinforced perimeter roping.",
     specs: {
@@ -72,7 +72,7 @@ export const SERVICES = [
     title: "Duct Area Covering Nets",
     category: "commercial",
     badge: "Certified Rope Access",
-    image: "/images/duct-area-nets.jpg",
+    image: "./images/duct-area-nets.jpg",
     shortDesc: "Specialized deep building shaft netting to stop pigeon infestation, foul odors, and debris accumulation in apartments.",
     fullDesc: "Building shafts and plumbing duct areas are breeding grounds for pigeons. Our certified abseiling rope technicians descend high-rise shafts to seal vertical ducts completely from top to bottom, keeping shafts hygienic and pigeon-free.",
     specs: {
@@ -89,7 +89,7 @@ export const SERVICES = [
     title: "Whole House Covering Nets",
     category: "commercial",
     badge: "Complete Enclosure",
-    image: "/images/house-covering-nets.jpg",
+    image: "./images/house-covering-nets.jpg",
     shortDesc: "Full building facade encapsulation for villas, standalone homes, and apartments for 100% bird & monkey freedom.",
     fullDesc: "For standalone villas and apartment blocks facing heavy pigeon or monkey intrusions across all facades. A continuous, seamless external protective envelope covers all windows, balconies, and parapets while remaining barely visible.",
     specs: {
@@ -106,7 +106,7 @@ export const SERVICES = [
     title: "Monkey Protection Nets",
     category: "residential",
     badge: "Extra Heavy Duty",
-    image: "/images/monkey-safety-nets.jpg",
+    image: "./images/monkey-safety-nets.jpg",
     shortDesc: "Reinforced thick-gauge safety netting designed to withstand heavy aggressive monkeys climbing, shaking, and biting.",
     fullDesc: "Monkeys possess immense jaw strength and climbing force that rip lightweight nets. Our monkey defense systems utilize heavy 2.5mm - 3.5mm thick braided nylon with reinforced steel perimeter boundary cabling to keep balconies and food storage 100% safe.",
     specs: {
@@ -123,7 +123,7 @@ export const SERVICES = [
     title: "Stainless Steel Bird Spikes",
     category: "balcony",
     badge: "Zero Maintenance",
-    image: "/images/bird-spikes.jpg",
+    image: "./images/bird-spikes.jpg",
     shortDesc: "SS 304 marine-grade anti-perch spikes on UV-stabilized polycarbonate bases for narrow window ledges and AC units.",
     fullDesc: "Humane, zero-harm physical deterrent that prevents pigeons and crows from landing or roosting on narrow horizontal surfaces like AC outdoor units, window sills, signboards, and parapet walls.",
     specs: {
@@ -140,7 +140,7 @@ export const SERVICES = [
     title: "Coconut Tree Safety Nets",
     category: "commercial",
     badge: "Property Protection",
-    image: "/images/coconut-tree-nets.jpg",
+    image: "./images/coconut-tree-nets.jpg",
     shortDesc: "Suspended catchment nets under coconut trees to prevent falling coconuts and dry fronds from damaging cars and people.",
     fullDesc: "Falling coconuts can weigh over 2-3 kg and cause fatal injuries or severe vehicle damage. Our heavy-gauge catchment nets are suspended with high-tension nylon guy-wires underneath the tree canopy to safely arrest falling coconuts.",
     specs: {
@@ -157,7 +157,7 @@ export const SERVICES = [
     title: "Glass Protection Nets",
     category: "commercial",
     badge: "Facade Defense",
-    image: "/images/glass-protection-nets.jpg",
+    image: "./images/glass-protection-nets.jpg",
     shortDesc: "Protective mesh barriers for commercial glass curtain walls, atriums, and skylights against debris and birds.",
     fullDesc: "Prevents high-speed bird collisions, falling hail, and debris from cracking costly architectural glass facades. Also prevents glass shatter fragments from falling onto pedestrian zones below during extreme weather.",
     specs: {
@@ -174,7 +174,7 @@ export const SERVICES = [
     title: "Drag Nets & Perimeter Netting",
     category: "sports",
     badge: "Field Safety",
-    image: "/images/drag-nets.jpg",
+    image: "./images/drag-nets.jpg",
     shortDesc: "Heavy ground-dragging boundary nets for sports fields, multi-purpose turfs, agricultural ponds, and storage yards.",
     fullDesc: "Rugged bottom-weighted perimeter nets designed to divide athletic grounds, prevent sports balls from rolling into traffic or drains, and provide secure containment across industrial yards.",
     specs: {
@@ -191,7 +191,7 @@ export const SERVICES = [
     title: "Staircase & Terrace Nets",
     category: "residential",
     badge: "Child & Senior Safety",
-    image: "/images/staircase-terrace-nets.jpg",
+    image: "./images/staircase-terrace-nets.jpg",
     shortDesc: "Vertical void netting for open stairwells and open roof terraces to prevent fatal falls in multi-storey residences.",
     fullDesc: "Open staircase wells and low terrace parapets pose severe hazards for toddlers, elderly family members, and house pets. We fit seamless vertical nets from floor to ceiling or along handrails with customized brackets to harmonize with interior aesthetics.",
     specs: {
@@ -208,7 +208,7 @@ export const SERVICES = [
     title: "Pet & Cat Safety Nets",
     category: "residential",
     badge: "Claw & Chew Resistant",
-    image: "/images/pet-cat-safety-nets.jpg",
+    image: "./images/pet-cat-safety-nets.jpg",
     shortDesc: "Bite-resistant, small-mesh balcony and window netting to keep playful cats and dogs safe from high-rise falls.",
     fullDesc: "High-Rise Syndrome is a leading cause of pet injuries in Bangalore. Our specialized pet nets feature tight 20mm-25mm apertures and multi-core braided twine that resists feline clawing and teeth chewing while giving pets fresh air.",
     specs: {
@@ -225,7 +225,7 @@ export const SERVICES = [
     title: "Multi-Sport Ground Netting",
     category: "sports",
     badge: "Turf & Academy",
-    image: "/images/sports-nets.jpg",
+    image: "./images/sports-nets.jpg",
     shortDesc: "High-altitude boundary netting for football turfs, box cricket, badminton courts, and school athletic facilities.",
     fullDesc: "Complete perimeter netting systems up to 40 feet high for modern artificial turf grounds. Designed with heavy-gauge GI boundary wire ropes and turnbuckles to withstand high winds and repeated heavy football strikes.",
     specs: {
@@ -242,7 +242,7 @@ export const SERVICES = [
     title: "Construction & Debris Nets",
     category: "commercial",
     badge: "Industrial Safety",
-    image: "/images/construction-safety-nets.jpg",
+    image: "./images/construction-safety-nets.jpg",
     shortDesc: "Heavy-duty dual-layer fall arrest and fine debris containment nets complying with Indian & International safety standards.",
     fullDesc: "Heavy-duty dual-mesh safety nets engineered for building construction sites. Features an inner 10mm-20mm fine debris mesh to catch falling tools and mortar, backed by a high-tensile 100mm load-bearing rope net that catches falling personnel.",
     specs: {
@@ -259,7 +259,7 @@ export const SERVICES = [
     title: "Anti-Bird, Garden & Shade Nets",
     category: "balcony",
     badge: "Eco & Plant Care",
-    image: "/images/garden-bird-shade-nets.jpg",
+    image: "./images/garden-bird-shade-nets.jpg",
     shortDesc: "Multi-purpose agro shade nets (50%–90% shade) protecting rooftop gardens, balconies, and plants from heat & birds.",
     fullDesc: "Protects delicate terrace gardens, potted plants, and outdoor sitting lounges from scorching Bangalore UV sun rays while stopping birds from plucking fruits or vegetables. Available in attractive Forest Green, White, and Beige.",
     specs: {

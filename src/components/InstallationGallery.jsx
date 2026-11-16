@@ -7,7 +7,7 @@ const REAL_PROJECTS = [
     title: "Indoor Staircase Safety Net Installation",
     location: "Villas, Sahakara Nagar, Bengaluru",
     type: "Child Safety",
-    image: "/images/staircase-terrace-nets.jpg",
+    image: "./images/staircase-terrace-nets.jpg",
     desc: "Seamless white high-tensile safety net anchored along interior open marble staircase void."
   },
   {
@@ -15,7 +15,7 @@ const REAL_PROJECTS = [
     title: "Commercial High-Rise Duct Area Covering",
     location: "Luxury Apartments, Hebbal, Bengaluru",
     type: "Duct Pigeon Proofing",
-    image: "/images/duct-area-nets.jpg",
+    image: "./images/duct-area-nets.jpg",
     desc: "Certified abseiling technician installing continuous vertical pigeon-proof barrier down building shaft."
   },
   {
@@ -23,7 +23,7 @@ const REAL_PROJECTS = [
     title: "Complete House Exterior Facade Encapsulation",
     location: "Independent Residence, Yelahanka, Bengaluru",
     type: "Whole House Netting",
-    image: "/images/house-covering-nets.jpg",
+    image: "./images/house-covering-nets.jpg",
     desc: "Full building envelope preventing monkey and pigeon perching while keeping architecture pristine."
   },
   {
@@ -31,7 +31,7 @@ const REAL_PROJECTS = [
     title: "Apartment Building Shaft & Window Protection",
     location: "Residential Complex, MS Palya, Bengaluru",
     type: "Pigeon Protection",
-    image: "/images/building-pigeon-covering.jpg",
+    image: "./images/building-pigeon-covering.jpg",
     desc: "Heavy-duty UV stabilized netting installed across all window shafts to prevent nesting."
   },
   {
@@ -39,7 +39,7 @@ const REAL_PROJECTS = [
     title: "Ground Perimeter Shade & Driveway Compound Net",
     location: "Gated Community, Vidyaranyapura, Bengaluru",
     type: "Garden & Shade Netting",
-    image: "/images/sports-compound-net.jpg",
+    image: "./images/sports-compound-net.jpg",
     desc: "High canopy green shade net over driveway and play court to block harsh sun and stray balls."
   },
   {
@@ -47,7 +47,7 @@ const REAL_PROJECTS = [
     title: "High-Rise Balcony SS 316 Invisible Grills",
     location: "Prestige High-Rise, Whitefield, Bengaluru",
     type: "SS 316 Invisible Grills",
-    image: "/images/invisible-grills-cityview.jpg",
+    image: "./images/invisible-grills-cityview.jpg",
     desc: "Marine-grade stainless steel cables maintaining uninterrupted 24th-floor Bangalore skyline views."
   },
   {
@@ -55,7 +55,7 @@ const REAL_PROJECTS = [
     title: "Staircase Railing On-Site Net Tensioning",
     location: "Duplex Home, HSR Layout, Bengaluru",
     type: "Technician Craftsmanship",
-    image: "/images/staircase-installation-work.jpg",
+    image: "./images/staircase-installation-work.jpg",
     desc: "Precision tensioning with diamond knot fasteners along stainless steel banister."
   },
   {
@@ -63,7 +63,7 @@ const REAL_PROJECTS = [
     title: "Commercial Sports Turf High-Altitude Netting",
     location: "Football Arena, Hennur Road, Bengaluru",
     type: "Sports Turf",
-    image: "/images/turf-sports-netting.jpg",
+    image: "./images/turf-sports-netting.jpg",
     desc: "Full 30ft perimeter and ceiling netting with high-impact shock absorption for box cricket & football."
   }
 ];
